@@ -18,6 +18,7 @@ nginx_tarball_url=http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 pcre_tarball_url=http://iweb.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION}/pcre-${PCRE_VERSION}.tar.bz2
 headers_more_nginx_module_url=https://github.com/openresty/headers-more-nginx-module/archive/v${HEADERS_MORE_VERSION}.tar.gz
 zlib_url=http://zlib.net/zlib-${ZLIB_VERSION}.tar.gz
+stub_status_url=http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 
 temp_dir=$(mktemp -d /tmp/nginx.XXXXXXXXXX)
 
@@ -39,6 +40,9 @@ echo "Downloading $headers_more_nginx_module_url"
 
 echo "Downloading $zlib_url"
 (cd nginx-${NGINX_VERSION} && curl -L $zlib_url | tar xvz )
+
+echo "Downloading $stub_status_url"
+(cd nginx-${NGINX_VERSION} && curl -L $stub_status_url | tar xvz )
 
 (
   cd nginx-${NGINX_VERSION}
