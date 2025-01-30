@@ -59,7 +59,10 @@ fi
     --with-http_realip_module \
     --with-http_ssl_module \
     --with-http_stub_status_module \
+<<<<<<< HEAD
 >>>>>>> cf6c93d (ops-821: nginx with status stub (#3))
+=======
+>>>>>>> main
     --prefix=/tmp/nginx \
     "${configure_opts[@]}"
   make install
