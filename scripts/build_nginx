@@ -33,7 +33,7 @@ echo "Downloading $uuid4_url"
 curl -sSL "$uuid4_url" | tar xvz -C "nginx-${NGINX_VERSION}"
 
 configure_opts=(
-  --with-pcre=pcre-${PCRE_VERSION}
+  --with-pcre
   --with-http_gzip_static_module
   --with-http_realip_module
   --with-http_ssl_module
